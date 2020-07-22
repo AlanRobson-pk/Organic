@@ -1,16 +1,16 @@
 # prajnaa_organic_store
 
-A new Flutter project.
+Prajnaa Farm's Organic store app created by Guzo India. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Buy Online or Order Online after installing this app to your android or iOS devices. 
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Home: Prajnaa Farm Home Screen](https://prajnaa.in)
+- [Sore: Prajnaa Farm Organic Store](https://prajnaa.in/online-store)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For any customer support : Call us and send your suggestion and feedback visit our 
+[Contact Page](https://prajnaa.in/contact-us).
+
