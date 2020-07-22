@@ -22,13 +22,14 @@ class _HomePageState extends State<HomePage> {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/prajnaa-splash.jpg'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/prajnaa-splash.jpg'),
+              fit: BoxFit.cover),
         ),
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.bottomRight, colors: [
               Colors.black.withOpacity(.9),
-              Colors.black.withOpacity(.4),
+              Colors.black.withOpacity(.5),
             ]),
           ),
           child: Padding(
@@ -37,9 +38,18 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
+               Container(
+                 alignment: Alignment.center,
+                 child: CircleAvatar(
+                   radius: 50.0,
+                   backgroundImage: AssetImage('assets/images/logo.png'),
+                    backgroundColor: Colors.transparent,
+                 ),
+               ),
+               SizedBox(height: 20.0,),
                 Text(
                   "Prajnaa Farm's Organic Store",
-                  // textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40.0,
@@ -51,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Text(
                   "Let's start with season's fresh collection for a healthy life.",
-                  // textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20.0,
@@ -69,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Center(
                     child: Text(
-                      'Get Start',
+                      'Get Started',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -86,8 +96,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Center(
-                    child: Text(                                                        
-                      'Create Account',      
+                    child: Text(
+                      'Create Account',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
