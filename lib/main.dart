@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:prajnaa_organic_store/shop.dart';
+
 
 void main() {
   runApp(
@@ -14,7 +17,30 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  AnimationController _scaleController;
+  Animation<double> _scaleAnimation;
+
+  bool hide = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _scaleController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 300),
+    );
+
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Shop()));
+            }
+          });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,15 +64,17 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-               Container(
-                 alignment: Alignment.center,
-                 child: CircleAvatar(
-                   radius: 50.0,
-                   backgroundImage: AssetImage('assets/images/logo.png'),
+                Container(
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    radius: 50.0,
+                    backgroundImage: AssetImage('assets/images/logo.png'),
                     backgroundColor: Colors.transparent,
-                 ),
-               ),
-               SizedBox(height: 20.0,),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
                 Text(
                   "Prajnaa Farm's Organic Store",
                   textAlign: TextAlign.center,
@@ -57,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Text(
                   "Let's start with season's fresh collection for a healthy life.",
@@ -71,17 +99,33 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 70,
                 ),
-                Container(
-                  height: 50.0,
-                  decoration: BoxDecoration(
-                    color: Colors.yellow[200],
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Get Started',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      hide = true;
+                    });
+                    _scaleController.forward();
+                  },
+                  child: AnimatedBuilder(
+                    animation: _scaleController,
+                    builder: (context, child) => Transform.scale(
+                      scale: _scaleAnimation.value,
+                      child: Container(
+                        height: 50.0,
+                        decoration: BoxDecoration(
+                          color: Colors.yellow[200],
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                          child: hide == false
+                              ? Text(
+                                  'Get Started',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              : Container(),
+                        ),
                       ),
                     ),
                   ),
