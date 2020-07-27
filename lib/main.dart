@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:prajnaa_organic_store/animation.dart';
 import 'package:prajnaa_organic_store/shop.dart';
 
 
@@ -64,18 +65,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Container(
+                FadeAnimation(1.5, Container(
                   alignment: Alignment.center,
                   child: CircleAvatar(
                     radius: 50.0,
                     backgroundImage: AssetImage('assets/images/logo.png'),
                     backgroundColor: Colors.transparent,
                   ),
-                ),
+                ),),
                 SizedBox(
                   height: 20.0,
                 ),
-                Text(
+                FadeAnimation(1.2, Text(
                   "Prajnaa Farm's Organic Store",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -83,11 +84,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     fontSize: 40.0,
                     fontWeight: FontWeight.bold,
                   ),
-                ),
+                ),),
                 SizedBox(
                   height: 10,
                 ),
-                Text(
+                FadeAnimation(1.4, Text(
                   "Let's start with season's fresh collection for a healthy life.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -95,7 +96,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     fontSize: 20.0,
                     // fontWeight: FontWeight.bold,
                   ),
-                ),
+                ),),
                 SizedBox(
                   height: 70,
                 ),
@@ -110,7 +111,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     animation: _scaleController,
                     builder: (context, child) => Transform.scale(
                       scale: _scaleAnimation.value,
-                      child: Container(
+                      child: FadeAnimation(1.6, Container(
                         height: 50.0,
                         decoration: BoxDecoration(
                           color: Colors.yellow[200],
@@ -126,14 +127,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 )
                               : Container(),
                         ),
-                      ),
+                      ),),
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                Container(
+                FadeAnimation(1.9, Container(
                   height: 50.0,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.yellow[200]),
@@ -148,7 +149,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       ),
                     ),
                   ),
-                ),
+                ),),
                 SizedBox(
                   height: 30,
                 ),
