@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prajnaa_organic_store/animation.dart';
 
-import 'main.dart';
 
 class Shop extends StatefulWidget {
   @override
