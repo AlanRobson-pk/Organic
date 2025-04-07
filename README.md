@@ -1,4 +1,4 @@
-# prajnaa_organic_store
+# True Soap Website Development
 
 Prajnaa Farm's Organic store app created by Guzo India. 
 
@@ -8,9 +8,9 @@ Buy Online or Order Online after installing this app to your android or iOS devi
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Home: Prajnaa Farm Home Screen](https://prajnaa.in)
-- [Sore: Prajnaa Farm Organic Store](https://prajnaa.in/online-store)
+- [Home: The True Soap Home Screen](https://thetruesoap.com)
+- [Sore: The True Soap Store](https://thetruesoap.com/online-store)
 
 For any customer support : Call us and send your suggestion and feedback visit our 
-[Contact Page](https://prajnaa.in/contact-us).
+[Contact Page](https://thetruesoap.com/contact-us).
 
