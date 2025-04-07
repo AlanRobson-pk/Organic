@@ -1,6 +1,6 @@
 # True Soap Website Development
 
-Prajnaa Farm's Organic store app created by Guzo India. 
+The True Soap Organic store app created by Helmstrat. 
 
 ## Getting Started
 
